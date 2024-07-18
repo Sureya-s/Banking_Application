@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .admin-container {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            width: 300px;
+        }
+        .admin-container input, .admin-container select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        .admin-container button {
+  			display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .admin-container button:hover {
+            background-color: #45a049;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button-container a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button-container a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <h2>Register Customer</h2>
+        <form action="registerCustomer" method="post">
+            <input type="text" name="fullName" placeholder="Full Name" required>
+            <input type="text" name="address" placeholder="Address" required>
+            <input type="text" name="mobileNo" placeholder="Mobile No" required>
+            <input type="email" name="emailId" placeholder="Email ID" required>
+            <select name="accountType" required>
+                <option value="Saving">Saving Account</option>
+                <option value="Current">Current Account</option>
+            </select>
+            <input type="number" name="initialBalance" placeholder="Initial Balance (min 1000)" required>
+            <input type="date" name="dateOfBirth" placeholder="Date of Birth" required>
+            <input type="text" name="idProof" placeholder="ID Proof" required>
+            <button type="submit">Register Customer</button>
+        </form>
+    </div>
+    <div class="button-container">
+        <a href="other.html">Other Functionalities</a>
+    </div>
+</body>
+</html>

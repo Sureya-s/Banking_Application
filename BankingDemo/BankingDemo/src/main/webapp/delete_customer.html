@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete User</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .delete-container {
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .delete-container h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .delete-container input[type="email"], .delete-container button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .delete-container button {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .delete-container button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="delete-container">
+        <h2>Delete User</h2>
+        <form action="DeleteUserServlet" method="post">
+            <input type="email" name="email" placeholder="Enter user's email" required>
+            <button type="submit">Delete User</button>
+        </form>
+    </div>
+</body>
+</html>

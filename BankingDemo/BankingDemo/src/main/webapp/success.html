@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .success-container {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .success-container h2 {
+            color: #4CAF50;
+        }
+        .success-container p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <h2>Registration Successful!</h2>
+        <p>Account No: <strong id="accountNo"></strong></p>
+        <p>Username (Email ID): <strong id="username"></strong></p>
+        <p>Temporary Password: <strong id="password"></strong></p>
+        <p><a href="customer.html">Go to Login</a></p>
+    </div>
+
+    <script>
+        // Get query parameters from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const accountNo = urlParams.get('accountNo');
+        const username = urlParams.get('username');
+        const password = urlParams.get('password');
+
+        // Set the text content of the elements
+        document.getElementById('accountNo').textContent = accountNo;
+        document.getElementById('username').textContent = username;
+        document.getElementById('password').textContent = password;
+    </script>
+</body>
+</html>
